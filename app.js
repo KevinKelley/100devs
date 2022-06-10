@@ -7,22 +7,12 @@ app.use((req, res, next) => {
   next();
 });
 
-const serveIndex = require('serve-index');
-
-const app = express();
-
-app.use((req, res, next) => {
-  console.log('Time: ', Date.now());
-  next();
-});
-
 app.use('/request-type', (req, res, next) => {
   console.log('Request type: ', req.method);
   next();
 });
 
 app.use('/public', express.static('public'));
-app.use('/public', serveIndex('public'));
 
 
 app.get('/', (req, res) => {
@@ -30,7 +20,10 @@ app.get('/', (req, res) => {
 })
 
 app.put('/addOneLike', (req, res) => {
-  //db.collection('rappers').updateOne({stageName: request.body.stageName$, birthName: req.body.birthName$, likes: request.body.likes$},{
+  db.collection('rappers').updateOne(
+    {
+      stageName: request.body.stageName$, birthName: req.body.birthName$, likes: request.body.likes$
+    },{
     $set: {
       likes: request.body.likes$ + 1
     }
@@ -39,6 +32,13 @@ app.put('/addOneLike', (req, res) => {
 })
 })
 
+app.post('/info', (req, res) => {
+
+})
+
+app.delete('/info', (req, res) => {
+
+})
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
