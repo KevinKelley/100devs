@@ -1,0 +1,27 @@
+{
+  "name": "100devs",
+  "version": "1.0.0",
+  "description": "code-along to #100devs school",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KevinKelley/100devs.git"
+  },
+  "keywords": [
+    "100devs",
+    "express",
+    "nodejs"
+  ],
+  "author": "Kevin Kelley",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/KevinKelley/100devs/issues"
+  },
+  "homepage": "https://github.com/KevinKelley/100devs#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
