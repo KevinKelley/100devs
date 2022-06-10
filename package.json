@@ -22,6 +22,8 @@
   },
   "homepage": "https://github.com/KevinKelley/100devs#readme",
   "dependencies": {
+    "ejs": "^3.1.8",
+    "env": "^0.0.2",
     "express": "^4.18.1"
   }
 }
